@@ -30,7 +30,7 @@ config CUSTOM_ASSETS_FILE
 
 choice
     prompt "Default Language"
-    default LANGUAGE_ZH_CN
+    default LANGUAGE_TH_TH
     help
         Select device display language
 
@@ -443,6 +443,9 @@ choice BOARD_TYPE
         depends on IDF_TARGET_ESP32S3
     config BOARD_TYPE_HU_087
         bool "HU-087"
+        depends on IDF_TARGET_ESP32S3
+    config BOARD_TYPE_GEZIPAI
+        bool "Gezipai"
         depends on IDF_TARGET_ESP32S3
 endchoice
 
