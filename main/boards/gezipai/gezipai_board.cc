@@ -110,12 +110,12 @@ private:
 
     void InitializeButtons()
     {
-        boot_button_.OnClick([this]()
-                             {
-            auto& app = Application::GetInstance();
-            if (app.GetDeviceState() == kDeviceStateStarting && !WifiStation::GetInstance().IsConnected()) {
-                ResetWifiConfiguration();
-            } });
+        //boot_button_.OnClick([this]()
+        //                     {
+        //            //auto& app = Application::GetInstance();
+        //            //if (app.GetDeviceState() == kDeviceStateStarting && !WifiStation::G::GetInstance().IsConnected()) {
+        //            //    ResetWifiConfiguration();
+        //            //} });
         boot_button_.OnPressDown([this]()
                                  { Application::GetInstance().StartListening(); });
         boot_button_.OnPressUp([this]()
